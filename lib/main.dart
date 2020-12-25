@@ -12,61 +12,105 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        appBar: AppBar(
+          brightness: Brightness.dark,
+          backgroundColor: Colors.black,
+        ),
+        backgroundColor: Colors.black,
         body: SafeArea(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              radius: 60.0,
-              backgroundColor: Colors.red,
-              backgroundImage: AssetImage('images/image.jpeg'),
+            child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/bg.jpg"),
+              fit: BoxFit.cover,
             ),
-            Text(
-              "Ghayoor ul Haq",
-              style: TextStyle(
-                  fontSize: 40.0,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 62.0,
+                backgroundColor: Colors.orange.shade100,
+                child: CircleAvatar(
+                  radius: 60.0,
+                  backgroundImage: AssetImage('images/image.png'),
+                ),
+              ),
+              Text(
+                "Ghayoor ul Haq",
+                style: TextStyle(
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.orange.shade700,
+                    fontFamily: 'Pacifico'),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Text(
+                "S O F T W A R E   E N G I N E E R",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.orange.shade100,
+                  fontFamily: 'Source Serif Pro',
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontFamily: 'Pacifico'),
-            ),
-            Text(
-              "S O F T W A R E   E N G I N E E R",
-              style: TextStyle(
-                fontSize: 20.0,
-                color: Colors.teal[100],
-                fontFamily: 'Source Serif Pro',
-                fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            Container(
-              color: Colors.white,
-              padding: EdgeInsets.all(10.0),
-              margin: EdgeInsets.symmetric(
-                vertical: 10.0,
-                horizontal: 25.0,
+              SizedBox(
+                height: 20.0,
+                width: 200,
+                child: Divider(
+                  color: Colors.orange.shade100,
+                ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(
-                    Icons.link,
-                    color: Colors.teal[800],
+              Card(
+                color: Colors.orange.shade100,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.folder_special,
+                    color: Colors.orange.shade700,
                     size: 30,
                   ),
-                  Text(
+                  title: Text(
                     'github.com/GhayoorUlHaq',
                     style: TextStyle(
-                      color: Colors.teal[800],
+                      color: Colors.orange.shade800,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Source Serif Pro',
                       fontSize: 15.0,
                     ),
                   ),
-                ],
+                ),
               ),
-            )
-          ],
+              Card(
+                color: Colors.orange.shade100,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.language,
+                    color: Colors.orange.shade700,
+                    size: 30,
+                  ),
+                  title: Text(
+                    'https://www.ghayoor.com',
+                    style: TextStyle(
+                      color: Colors.orange.shade800,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Source Serif Pro',
+                      fontSize: 15.0,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         )),
       ),
     );
