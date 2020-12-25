@@ -1,7 +1,7 @@
 # Mycard
  Personal Card in flutter. Developed to learning Flutter.
 
-<img src="./screenshot/image1.png" alt="image1" style="zoom:10%;" />
+<img src="./screenshot/image1.png" alt="image1" />
 
 ## Fonts
 
